@@ -1,0 +1,7 @@
+ana 1 2 3 4 5 6
+gigi 4 5
+ionel 1 2 9
+vasile 2 17
+dan 4 5 12
+florin 8 88
+mircea 1 100

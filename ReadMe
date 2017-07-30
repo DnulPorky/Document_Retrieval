@@ -1,0 +1,44 @@
+	Document Retrieval
+
+	'Document retrieval' is a process that searches and finds documents(if exists) containing specified words. 
+	The purpose of this project is to implement document retrieval starting from a dictionary. The dictionary is given as 
+text file, and the words are lexicographically ordered.It must be stored internally as a structure offering quick access 
+to any of its elements.
+	The dictionary is a multitude of key-value type associations, where keys are represented by words and values are sets of 
+indices associated to documents.It is assumed that dictionary's size is very vast, so in order to quickly find a word we have 
+to use a structure with similar kind of access.It was recommend one of the following: trie, skip list, hash table.
+	The input is represented by a series of interrogations of type w,(w1 and w2), (w1 or w2), (w1 or (w2 and w3)) where w, w1,
+w2, w3 are words from dictionary. General case an interrogation is an expression E that may be either a w, a word from 
+dictionary, or (E1 and E2), or (E1 or E2), where E1 and E2 are sub-expressions defined the same way.A simple interrogation 
+of only one word will return the list of documents containing that word. The interrogation (E1 and E2) will return the list 
+of documents obtained by intersecting the results of evaluating expressions E1 and E2. The interrogation (E1 or E2) will return 
+the list of documents obtained by reunion of results after evaluating expressions E1 and E2.
+	The objectives for this project were:
+	- to read the dictionary.It comes as a text file that must be read and process line by line in order to obtain from each line 
+	a pair of key(word) - values(indices associated to documents);
+	- to implement a quick access data structure that stores the dictionary;
+	- to parse the interrogations given as input;
+	- to process interrogations.
+	Example:
+	Let's assume following dictionary:
+	- apple 1 2 7 10 200
+	- cherry 7 8 9 205 300
+	- pineapple 2 3 4 5 6 7
+	- strawberry 1 3 4 5 7 234 300
+	For following interrogations we'll obtained corresponding results:
+	- apple -> 1 2 7 10 200
+	- (apple and strawberry) -> 1 7
+	- ((pineapple and cherry) and strawberry) -> 7
+	- (apple or cherry) -> 1 2 7 8 9 10 200 205 300
+	- (apple and (pineapple or cherry)) -> 2 7
+	- banana ->
+	- (apple and banana) ->
+	- (apple or banana) -> 1 2 7 10 200
+	The program receive the name and location of the dictionary text file as an argument command line(Run->Run Configurations->Arguments).
+Than it reads from standard input interrogations. For each interrogation will it will display(standard output) a set of numbers, 
+separated by space character, representing indices  of documents.Program stops after inserting 'quit' command.  
+	While developing this software it was not allowed to use standard Java collection from java.util(ArrayList, HashMap, so on) 
+as data structures to store the dictionary content. So I had to implement my own data structure.    
+	This project also contains documentation for more informations about it classes, methods and features.
+
+	
