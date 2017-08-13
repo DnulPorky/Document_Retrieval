@@ -1,7 +1,7 @@
 	Document Retrieval
 
 	'Document retrieval' is a process that searches and finds documents(if exists) containing specified words. 
-	The purpose of this project is to implement document retrieval starting from a dictionary. The dictionary is given as 
+	The purpose of this Java project is to implement document retrieval starting from a dictionary. The dictionary is given as 
 text file, and the words are lexicographically ordered.It must be stored internally as a structure offering quick access 
 to any of its elements.
 	The dictionary is a multitude of key-value type associations, where keys are represented by words and values are sets of 
